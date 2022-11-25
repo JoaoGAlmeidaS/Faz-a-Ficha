@@ -1,0 +1,31 @@
+@font-face {
+    font-family: Colus;
+    src: url('../fonts/Colus-Regular.eot');
+    src: url('../fonts/Colus-Regular.eot?#iefix') format('embedded-opentype'), url('../fonts/Colus-Regular.woff2') format('woff2'), url('../fonts/Colus-Regular.woff') format('woff'), url('../fonts/Colus-Regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: Mignon;
+    src: url('../fonts/Mignon-Medium.eot');
+    src: url('../fonts/Mignon-Medium.woff') format('woff'), url('../fonts/Mignon-Medium.ttf') format('truetype');
+}
+
+header {
+    font-family: 'MedievalSharp', cursive;
+}
+
+.runarcana {
+    font-family: 'Colus';
+    font-size: 18px;
+}
+
+.ordemParanormal {
+    font-family: 'Mignon';
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.font3 {
+    font-family: 'Mignon';
+    font-size: 18px;
+}
