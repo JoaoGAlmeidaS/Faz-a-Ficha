@@ -673,3 +673,153 @@ input::-webkit-inner-spin-button {
     position: relative;
     margin: 0 auto 0 0px;
 }
+
+.inventario {
+    margin-top: 60px;
+}
+
+.faixa3 {
+    background: #fff;
+    width: 95%;
+    margin: 10px 15px;
+    letter-spacing: 3px;
+    text-align: center;
+    font-family: 'Mignon';
+    font-weight: bold;
+    font-size: 33px;
+}
+
+.tabela {
+    width: 95%;
+    margin: auto;
+}
+
+.tabela table {
+    background-color: #fff;
+}
+
+.itemI {
+    width: 180px;
+}
+
+.descricaoI {
+    width: 300px;
+    height: 30px;
+    font-size: 12px;
+}
+
+.lore {
+    margin: auto;
+    margin-top: 45.5px;
+}
+
+.lore textarea {
+    width: 95%;
+    margin: auto;
+    border-radius: none;
+    font-size: 12px;
+    resize: none;
+}
+
+.armas table {
+    background-color: #fff;
+}
+
+.arma {
+    width: 200px;
+    font-size: 15px;
+}
+
+.descricaoA {
+    width: 500px;
+    font-size: 15px;
+}
+
+.atributoArma {
+    width: 70px;
+    font-size: 15px;
+}
+
+.faixa5 {
+    background: #fff;
+    width: 100%;
+    margin: 10px auto;
+    text-align: center;
+    font-family: 'Mignon';
+    font-weight: bold;
+    letter-spacing: 4px;
+}
+
+.faixa5 h1 {
+    font-size: 33px;
+}
+
+.spanTitulo {
+    float: right;
+    font-size: 16px;
+    padding: 15px 5px 15px 0px;
+    letter-spacing: 1px;
+}
+
+.DT {
+    float: right;
+    width: 40px;
+    margin: 5px 0px;
+    font-size: 20px;
+    margin: 10px 5px 15px 0px;
+    text-align: center;
+}
+
+.descricaoHR {
+    width: 100%;
+    resize: none;
+    font-size: 14px;
+}
+
+.listaRituais span {
+    font-size: 13px;
+}
+
+.botaoEnviar {
+    appearance: none;
+    background-color: #3E0973;
+    border: 2px solid #1A1A1A;
+    border-radius: 15px;
+    box-sizing: border-box;
+    color: #fff;
+    cursor: pointer;
+    display: inline-block;
+    font-family: Roobert, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    font-size: 16px;
+    font-weight: 600;
+    line-height: normal;
+    margin-left: 90%;
+    min-height: 60px;
+    min-width: 0;
+    outline: none;
+    padding: 16px 24px;
+    text-align: center;
+    text-decoration: none;
+    transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    width: 10%;
+    will-change: transform;
+}
+
+.botaoEnviar:disabled {
+    pointer-events: none;
+}
+
+.botaoEnviar:hover {
+    color: #fff;
+    background-color: transparent;
+    box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+    transform: translateY(-2px);
+}
+
+.botaoEnviar:active {
+    box-shadow: none;
+    transform: translateY(0);
+}

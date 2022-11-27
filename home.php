@@ -13,10 +13,10 @@ include __DIR__.'/includes/header.php';
 
 
 
-include __DIR__.'/includes/principal.php';
+include __DIR__.'/includes/paginainicial.php';
 
 
 
  
-include __DIR__.'/includes/footer.php'; 
+
 ?>

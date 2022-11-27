@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@500&family=MedievalSharp&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=ABeeZee:ital@1&family=Caveat:wght@600&family=Fredoka:wght@300;400;500&family=Grandstander:wght@300&family=Hubballi&family=Inter&family=Lato:wght@700&family=Nunito:wght@500&family=Oleo+Script+Swash+Caps:wght@700&family=Poppins&family=Raleway&family=Tiro+Gurmukhi&family=Ubuntu:wght@300;400&display=swap');
 @font-face {
     font-family: Colus;
     src: url('../fonts/Colus-Regular.eot');
@@ -8,6 +10,20 @@
     font-family: Mignon;
     src: url('../fonts/Mignon-Medium.eot');
     src: url('../fonts/Mignon-Medium.woff') format('woff'), url('../fonts/Mignon-Medium.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: Runarcana;
+    src: url(assets\fonts\Typo3-Medium.ttf);
+}
+
+@font-face {
+    font-family: Reforma;
+    src: url(assets\fonts\reforma-1969-blanca.ttf);
+}
+
+.fundoPreto {
+    background-color: black;
 }
 
 header {
@@ -28,4 +44,95 @@ header {
 .font3 {
     font-family: 'Mignon';
     font-size: 18px;
+}
+
+.white {
+    color: white;
+}
+
+.cursiva2 {
+    margin-top: 25px;
+    font-size: 70px;
+    font-family: 'Grandstander', cursive;
+    letter-spacing: 3px;
+}
+
+.cursiva {
+    font-size: 25px;
+    font-family: 'Grandstander', cursive;
+}
+
+.imagem p {
+    margin-right: 50px;
+}
+
+.imagem {
+    display: inline-block;
+}
+
+.OrdemPar {
+    margin: auto;
+    text-align: center;
+}
+
+.textOrdem {
+    width: 80%;
+    margin: auto;
+    text-align: center;
+}
+
+.textOrdem2 {
+    width: 80%;
+    margin: auto;
+    text-align: right;
+}
+
+.textOrdem2 img {
+    float: left;
+}
+
+.cursiva3 {
+    margin-top: 35px;
+    font-size: 60px;
+    font-family: 'Grandstander', cursive;
+    letter-spacing: 1px;
+}
+
+.runalol {
+    background-image: url("../../assets/img/warwick.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.textRuna {
+    color: #33003B;
+    font-family: Reforma;
+    letter-spacing: 1px;
+    font-size: 70px;
+    margin: auto;
+    margin-left: 200px;
+    margin-top: 20px;
+}
+
+.lol {
+    align-items: center;
+}
+
+.textRuna2 {
+    margin: 20px;
+    font-family: Runarcana;
+    color: #33003B;
+    font-size: 30px;
+    text-align: left;
+}
+
+.leagueofl img {
+    float: right;
+    border-radius: 10px;
+    margin: 20px;
+}
+
+.leagueofl {
+    margin: auto;
+    width: 80%;
 }
