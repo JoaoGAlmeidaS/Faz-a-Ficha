@@ -136,3 +136,13 @@ header {
     margin: auto;
     width: 80%;
 }
+
+.tabelaOP thead {
+    background-color: #0d6efd;
+    color: #e9ecef;
+}
+
+.tabelaOP a {
+    text-decoration: none;
+    color: #1A1A1A;
+}

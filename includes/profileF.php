@@ -1,5 +1,7 @@
 <?php 
 
+
+
 if($usuarioLogado['imagem'] == ""){
     $imglink = ' src="assets/img/user.png" alt="Foto de Perfil" class="rounded-circle" width="200"'; 
      
@@ -8,12 +10,12 @@ if($usuarioLogado['imagem'] == ""){
     $imglink =(' src="'. $usuarioLogado['imagem'].'" alt="Foto de Perfil" class="rounded-circle" width="200" height="200" ');
   }
   ?>
-<div class="container">
+<div class="container mb-5">
 <div class="main-body">
     
     
 
-    <div class="row gutters-sm">
+    <div class="row gutters-sm mt-4">
       <div class="col-md-4 mb-3">
         <div class="card">
           <div class="card-body">
@@ -49,6 +51,9 @@ if($usuarioLogado['imagem'] == ""){
                     </div>
                   </div>
                 </div>
+
+
+                
               </div>
             </div>
           </div>
@@ -99,26 +104,22 @@ if($usuarioLogado['imagem'] == ""){
             <div class="card h-100">
               <div class="card-body">
                 <h6 class="d-flex align-items-center mb-3"><i class="material-icons text-info mr-2">fichas </i> Ordem Paranormal</h6>
-                <small>Web Design</small>
-                <div class="progress mb-3" style="height: 5px">
-                  <div class="progress-bar bg-primary" role="progressbar" style="width: 80%" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
-                </div>
-                <small>Website Markup</small>
-                <div class="progress mb-3" style="height: 5px">
-                  <div class="progress-bar bg-primary" role="progressbar" style="width: 72%" aria-valuenow="72" aria-valuemin="0" aria-valuemax="100"></div>
-                </div>
-                <small>One Page</small>
-                <div class="progress mb-3" style="height: 5px">
-                  <div class="progress-bar bg-primary" role="progressbar" style="width: 89%" aria-valuenow="89" aria-valuemin="0" aria-valuemax="100"></div>
-                </div>
-                <small>Mobile Template</small>
-                <div class="progress mb-3" style="height: 5px">
-                  <div class="progress-bar bg-primary" role="progressbar" style="width: 55%" aria-valuenow="55" aria-valuemin="0" aria-valuemax="100"></div>
-                </div>
-                <small>Backend API</small>
-                <div class="progress mb-3" style="height: 5px">
-                  <div class="progress-bar bg-primary" role="progressbar" style="width: 66%" aria-valuenow="66" aria-valuemin="0" aria-valuemax="100"></div>
-                </div>
+                <table class="table text-center tabelaOP">
+                  <thead class="">
+                    <tr>
+                      <th scope="col" title="Clique no nome do seu personagem para abrir a ficha dele">Minhas Fichas</th>
+                      
+                    </tr>
+                  </thead>
+
+                  <tbody>
+                    <?=$resultados?>
+                    </tr>
+
+                  </tbody>
+                </table>
+
+
               </div>
             </div>
           </div>
@@ -158,3 +159,26 @@ if($usuarioLogado['imagem'] == ""){
 
   </div>
 </div>
+
+
+<!-- Footer -->
+<!-- .container -->
+
+</div>
+
+
+<footer id="sticky-footer" class="flex-shrink-0 py-4 bg-dark text-white-50 ">
+    <div class="container text-center">
+        <small>Copyright &copy; Your Website</small>
+    </div>
+</footer>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+    integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous">
+</script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.min.js"
+    integrity="sha384-IDwe1+LCz02ROU9k972gdyvl+AESN10+x7tBKgc9I5HFtuNz0wWnPclzo6p9vxnk" crossorigin="anonymous">
+</script>
+</body>
+
+</html>

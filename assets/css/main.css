@@ -788,12 +788,10 @@ input::-webkit-inner-spin-button {
     box-sizing: border-box;
     color: #fff;
     cursor: pointer;
-    display: inline-block;
     font-family: Roobert, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
     font-size: 16px;
     font-weight: 600;
     line-height: normal;
-    margin-left: 90%;
     min-height: 60px;
     min-width: 0;
     outline: none;
@@ -806,6 +804,7 @@ input::-webkit-inner-spin-button {
     touch-action: manipulation;
     width: 10%;
     will-change: transform;
+    margin-left: 80%;
 }
 
 .botaoEnviar:disabled {
@@ -822,4 +821,9 @@ input::-webkit-inner-spin-button {
 .botaoEnviar:active {
     box-shadow: none;
     transform: translateY(0);
+}
+
+.btnExcluir {
+    padding: 16px 24px;
+    font-size: 16px;
 }

@@ -8,9 +8,50 @@ use \App\Entity\Ficha;
 //OBRIGA O USUARIO A ESTAR LOGADO
 Login::requireLogin();
 
-if(isset($_POST['acao']) && $_POST['acao'] == "enviar"){
-    $modelo = 1;
+//Validar o ID
+if(!isset($_GET['idFicha']) or !is_numeric($_GET['idFicha'])){
+    header('location: index.php?status=error');
+    exit;
+}
 
+$obFicha = Ficha::getFichaPorID($_GET['idFicha']);
+
+    
+    $nomeArma = unserialize($obFicha->arma);
+    $descricaoArma = unserialize($obFicha->tipo);
+    $ataqueArma = unserialize($obFicha->ataques);
+    $alcanceArma = unserialize($obFicha->alcance);
+    $danoArma = unserialize($obFicha->dano);
+    $criticoArma = unserialize($obFicha->critico);
+    $recargaArma = unserialize($obFicha->recarga);
+    $especialArma = unserialize($obFicha->especial);
+
+    $ritual = unserialize($obFicha->magias);
+    $elemento = unserialize($obFicha->elemento);
+    $duracao = unserialize($obFicha->duracao);
+    $alvo = unserialize($obFicha->alvo);
+    $alcance = unserialize($obFicha->alcance_rit);
+    $peHR = unserialize($obFicha->custo);
+    $circulo = unserialize($obFicha->nivel_magia);
+    $pagina = unserialize($obFicha->pagina);
+    $descricaoHR = unserialize($obFicha->desc_magia);
+
+    $nomeItem = unserialize($obFicha->item_nome);
+    $descItem = unserialize($obFicha->item_desc);
+    $pesoItem = unserialize($obFicha->item_peso);
+
+
+//VALIDAR A VAGA
+if(!$obFicha instanceof Ficha){
+    header('location: index.php?status=error');
+    exit;
+}
+
+if(isset($_POST['acao']) && $_POST['acao'] == "Atualizar"){
+
+    $idFicha = $_GET['idFicha'];
+    $modelo = 1;
+    
     $nomeArma = serialize($_POST['nomeArma']);
     $descricaoArma = serialize($_POST['descricaoArma']);
     $ataqueArma = serialize($_POST['ataqueArma']);
@@ -33,11 +74,11 @@ if(isset($_POST['acao']) && $_POST['acao'] == "enviar"){
     $nomeItem = serialize($_POST['nomeItem']);
     $descItem = serialize($_POST['descItem']);
     $pesoItem = serialize($_POST['pesoItem']);
-
     
     
 
-    $obFicha = new Ficha;
+    $obFicha->idFicha = $idFicha;
+
     $obFicha->modelo = $modelo;
     $obFicha->personagem = $_POST['nome'];
     $obFicha->login = $_POST['jogador'];
@@ -122,10 +163,12 @@ if(isset($_POST['acao']) && $_POST['acao'] == "enviar"){
 
     
     
-    $obFicha->cadastrar();
+    $obFicha->atualizar();
+
+    
 
     echo '<script>
-            alert("Ficha Criada com Sucesso");
+            alert("Ficha Editada com Sucesso");
             location.href="perfil.php"
             </script>';
     exit;
@@ -133,10 +176,23 @@ if(isset($_POST['acao']) && $_POST['acao'] == "enviar"){
 }
 
 
+
+if(isset($_POST['excluir']) && $_POST['excluir'] == "excluir"){
+    $idFicha = $_GET['idFicha'];
+    $obFicha->idFicha = $idFicha;
+
+    $obFicha->excluir();
+
+
+}
+
+
+
+
 include __DIR__.'/includes/header.php';
 
 
-include __DIR__.'/includes/formOP.php';
+include __DIR__.'/includes/EformOP.php';
 
 
 
